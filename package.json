@@ -1,0 +1,13 @@
+{
+  "name": "@fczbkk/webinar-testable-js",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Riki Fridrich <riki@fczbkk.com> (http://fczbkk.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^26.1.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
