@@ -13,14 +13,14 @@ function splitName (fullName) {
 describe('Mutation', function () {
 
   it('should join name', function () {
-    const fullName = joinName(firstName, lastName)
-    expect(fullName).toBe('John Doe')
+    const result = joinName(firstName, lastName)
+    expect(result).toBe('John Doe')
   })
 
   it('should split name', function () {
-    const [firstName, lastName] = splitName(fullName)
-    expect(firstName).toBe('Riki')
-    expect(lastName).toBe('Fridrich')
+    const result = splitName(fullName)
+    expect(result[0]).toBe('Riki')
+    expect(result[1]).toBe('Fridrich')
   })
 
 })
