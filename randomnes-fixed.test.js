@@ -1,11 +1,6 @@
-function createUser (
-  name = 'John Doe',
-  isAdmin = false,
-  userId = getUniqueId()
-) {
+function createUser (name, userId = getUniqueId()) {
   return {
     name: name,
-    role: isAdmin ? 'admin' : 'guest',
     id: userId
   }
 }
@@ -17,10 +12,10 @@ function getUniqueId () {
 describe('Randomness', function () {
 
   const randomId = getUniqueId()
-  const refUser = createUser('John Doe', true, randomId)
+  const refUser = createUser('John Doe', randomId)
 
   it('should create new user', function () {
-    const newUser = createUser('John Doe', true, randomId)
+    const newUser = createUser('John Doe', randomId)
     expect(newUser).toEqual(refUser)
   })
 
