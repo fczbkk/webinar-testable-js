@@ -2,8 +2,8 @@ function handleClick (event) {
   console.log('X: ' + event.clientX + ', Y: ' + event.clientY)
 }
 
-document.addEventListener('click', handleClick)
-document.removeEventListener('click', handleClick)
+// document.addEventListener('click', handleClick)
+// document.removeEventListener('click', handleClick)
 
 describe('Events', function () {
 
