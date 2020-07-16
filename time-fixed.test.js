@@ -10,8 +10,9 @@ describe('Time manipulation', function () {
 
   it('should log message after 3 seconds', function () {
     const mockFn = jest.fn()
-    logLater('aaa', 3000, mockFn)
-    // ¯\_(ツ)_/¯
+    logLater('aaa', 10000, mockFn)
+    expect(mockFn).not.toHaveBeenCalled()
+    jest.advanceTimersByTime(10001)
     expect(mockFn).toHaveBeenCalledWith('aaa')
   })
 
